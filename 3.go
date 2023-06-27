@@ -1,21 +1,22 @@
 package main
 
-/*import "fmt"
+import "fmt"
 
-func inverter(spnt *string) string {
-	rns := []rune(spnt)
-	for i, j := 0, len(rns)-1; i < j; i, j = i+1, j-1 {
-		rns[i], rns[j] = rns[j], rns[i]
+func reverseString(s *string) {
+	runes := []rune(*s)
+	length := len(runes)
+
+	for i, j := 0, length-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
 	}
-	return string(rns)
+
+	*s = string(runes)
 }
 
 func main() {
-	var s string
-	fmt.Println("Digite uma string: ")
-	fmt.Scanln(&s)
-	var spnt *string = &s
-	r := inverter(spnt)
-	fmt.Println(s)
-	fmt.Println(r)
-}*/
+	str := "Hello, World!"
+	fmt.Println("Original:", str)
+
+	reverseString(&str)
+	fmt.Println("Reversed:", str)
+}
